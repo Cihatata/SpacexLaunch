@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceX Data</title>
+    <link type="text/css" rel="stylesheet" href="view/css/semantic.css">
+</head>
+<body>
+
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+<!--        <a href="#" class="header item">-->
+<!--            <img class="logo" src="assets/images/logo.png">-->
+<!--            Project Name-->
+<!--        </a>-->
+        <a style="float: left" class="item">
+            <i class="sidebar icon"></i> Menu
+        </a>
+        <a href="#" class="item">Home</a>
+
+
+
+    </div>
+</div>
+
+<div style="margin-top: 3%;" class="ui bottom attached segment">
+    <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
+
+        <a class="item">
+            <i class="home icon"></i> Home
+        </a>
+        <a class="item">
+            <i class="block layout icon"></i> Topics
+        </a>
+        <a class="item">
+            <i class="smile icon"></i> Friends
+        </a>
+        <a class="item">
+            <i class="calendar icon"></i> History
+        </a>
+        <div class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search countries...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+    </div>
+    <div class="pusher">
+        <div class="ui basic segment">
+            <h3 class="ui header">Application Content</h3>
+            <button id="getLaunch" class="ui secondary button">
+                Okay
+            </button>
+            <div class="ui two column stackable grid">
+            <div class="three column row">
+                <div class="column">
+                    <div class="ui segment">Content</div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header">Cute Dog</div>
+                                <div class="meta">
+                                    <span class="category">Animals</span>
+                                </div>
+                                <div class="description">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">Content</div>
+                </div>
+            </div>
+            </div>
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+
+<div id="div1"></div>
+
+<script type="application/javascript" src="view/js/jquery-3.4.1.js"></script>
+<script type="application/javascript" src="view/js/semantic.js"></script>
+
+<script type="application/javascript">
+    $("#getLaunch").click(function () {
+        console.log("girdi")
+        $.get({
+            url: "http://localhost:3000/spacex.json", success: function (result) {
+                console.log(JSON.stringify(result))
+                $("#div1").html(JSON.stringify(result));
+            }
+        });
+    });
+    $('.ui.sidebar').sidebar({
+        context: $('.bottom.segment')
+    }).sidebar('attach events', '.menu .item');
+    $(document).ready(function () {
+        $('.ui.search')
+            .search({
+                minCharacters : 2,
+                apiSettings: {
+                    url: 'https://api.spacexdata.com/v3/launches/{query}'
+                },
+                fields: {
+                    results : '',
+                    title   : 'flight_number',
+                    url     : 'static_fire_date_utc'
+                }
+            })
+        ;
+
+        // $('.ui.search')
+        //     .search({
+        //
+        //         source: content
+        //     });
+        // $('.ui.search')
+        //     .search({
+        //         minCharacters : 2,
+        //         apiSettings: {
+        //             url: 'https://api.github.com/search/repositories?q={query}'
+        //         },
+        //         fields: {
+        //             results : 'items',
+        //             title   : 'name',
+        //             url     : 'html_url'
+        //         }
+        //     })
+        // ;
+        var content = [
+            {title: 'Andorra'},
+            {title: 'United Arab Emirates'},
+            {title: 'Afghanistan'},
+            {title: 'Antigua'},
+            {title: 'Anguilla'},
+            {title: 'Albania'},
+            {title: 'Armenia'},
+            {title: 'Netherlands Antilles'},
+            {title: 'Angola'},
+            {title: 'Argentina'},
+            {title: 'American Samoa'},
+            {title: 'Austria'},
+            {title: 'Australia'},
+            {title: 'Aruba'},
+            {title: 'Aland Islands'},
+            {title: 'Azerbaijan'},
+            {title: 'Bosnia'},
+            {title: 'Barbados'},
+            {title: 'Bangladesh'},
+            {title: 'Belgium'},
+            {title: 'Burkina Faso'},
+            {title: 'Bulgaria'},
+            {title: 'Bahrain'},
+            {title: 'Burundi'}
+            // etc
+        ];
+    })
+
+</script>
+</body>
+</html>
