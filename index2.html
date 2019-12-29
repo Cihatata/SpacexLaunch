@@ -101,7 +101,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+
+                <div class="column my-time">
+                    <center ><h3 style="font-family: Poppins, sans-serif; margin-bottom: 3%">Will be Launched</h3></center>
                     <div class="timer"></div>
                     <div class="key">Weaks</div>
                     <div class="key">Days</div>
@@ -141,17 +143,6 @@
     $(document).ready(function () {
         console.log('calisti')
 
-        $('.timer').countdown('2020/10/10 10:20', function(event) {
-            $(this).html(event.strftime(
-                '' +
-                '<div class="time"><span>%w</span></div>'
-                +'<div class="time"><span>%d</span></div>'
-                +'<div class="time"><span >%H</span></div>'
-                +'<div class="time"><span >%M</span></div>'
-                +'<div class="time"><span >%S</span></div>' +
-                ''
-            ));
-        });
         //$('.timer').countdown('2020/01/01');
 
         $.get({
@@ -170,6 +161,23 @@
                 $("#mis_na_next").html(JSON.stringify(miss_na_next).replace(/^"(.*)"$/, '$1'))
                 $('#roc_na_next').html(JSON.stringify(roc_na_next).replace(/^"(.*)"$/, '$1'))
                 $('#launc_na_next').html(JSON.stringify(la_site_next).replace(/^"(.*)"$/, '$1'))
+
+                let date=la_date_loc_next.slice(0,10);
+                let time =la_date_loc_next.slice(11,19);
+                console.log(time)
+                $('.timer').countdown(date + ' ' + time, function(event) {
+                    $(this).html(event.strftime(
+
+                        '' +
+                        '<div class="time"><span>%w</span></div>'
+                        +'<div class="time"><span>%d</span></div>'
+                        +'<div class="time"><span >%H</span></div>'
+                        +'<div class="time"><span >%M</span></div>'
+                        +'<div class="time"><span >%S</span></div>' +
+                        ''
+                    ));
+
+                });
             }
         });
         $.get({

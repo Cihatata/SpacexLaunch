@@ -10,6 +10,7 @@ body{
     background-image: url('view/img/rocketback.jpg');
     /*background-image: linear-gradient(to right, #1DA1F2, #0e8c8c);*/
     /*background-color: #0c85d0;*/
+    font-family: Poppins, sans-serif;
 }
 
 .timer{
@@ -21,16 +22,21 @@ body{
     float: left !important;
     position: relative;
     width: 90%;
-    padding: 5px;
-    margin: 0 5px;
-    background: #262626;
+    padding: 8px;
+    margin: 0 10px;
+    background: #009c95;
     color: #fff;
     border: 2px solid #000;
+
 }
 .key {
     float: left !important;
     position: relative;
-    width: 13%;
+    width: 14%;
     padding: 5px;
-    margin: 0 5px;
+    margin: 0 8px;
+}
+.my-time{
+    margin-top: 10%;
+
 }
