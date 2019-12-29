@@ -4,82 +4,132 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" rel="stylesheet" href="view/css/semantic.css">
+    <link rel="stylesheet" href="view/css/app.css">
 
 </head>
-<body>
+<body style="background-image: url('view/img/rocketback.jpg'); background-repeat: repeat-x;">
 
-<div class="ui four column grid">
-    <div class="widescreen only ten wide column">
-        <div class="ui segment">Widescreen</div>
-    </div>
-    <div class="widescreen only six wide column">
-        <div class="ui segment">Widescreen</div>
-    </div>
-    <div class="large screen only five wide column">
+
+<div class="three column stackable ui grid">
+    <div class="four wide column">
 
     </div>
-    <div class="large screen only six wide column">
-        <div class="ui animated button" tabindex="0">
-            <div class="visible content">Next</div>
-            <div class="hidden content">
-                <i class="right arrow icon"></i>
-            </div>
+    <div class="eight wide column">
+        <div style="margin-top: 13%" class="ui row ">
+            <center>
+                <div class="ui black animated  button" tabindex="0">
+                    <div class="visible content">Next</div>
+                    <div class="hidden content">
+                        <i class="right arrow icon"></i>
+                    </div>
+                </div>
+                <div class="ui red animated button " tabindex="0">
+                    <div class="visible content">POST</div>
+                    <div class="hidden content">
+                        <i class="rocket icon"></i>
+                    </div>
+                </div>
+            </center>
         </div>
-        <button class="ui secondary button">
-            Okay
-        </button>
-        <div class="ui segment">
-            <div class="ui shape">
-                <div class="sides">
-                    <div class="second side">Second</div>
-                    <div class="active three side">THREEThis is the last side</div>
+        <div style="margin-top: 3%" class="ui segment">
+            <div class="two column stackable ui grid">
+                <div class="column">
+                    <div class="ui shape">
+                        <div class="sides">
+                            <div class="second side">
+                                <div class="content">
+                                    <div class="ui row">
+                                        <a class="ui black ribbon label">Flight Number<span
+                                                id="fli_num_launched"></span></a>
+                                        <div>
+                                            <a class="ui teal image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Mission Name
+                                                <div class="detail" id="mis_na_launched"></div>
+                                            </a>
+
+                                        </div>
+                                        <div>
+                                            <a class="ui blue image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Rocket Name
+                                                <div class="detail" id="roc_na_launched"></div>
+                                            </a>
+
+                                        </div>
+                                        <div>
+                                            <a class="ui yellow image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Launch Site Name
+                                                <div class="detail" id="launc_na_launched"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="active three side">
+                                <div class="content">
+                                    <a class="ui black ribbon label">Flight Number <span id="fli_num_next"></span></a>
+                                    <div>
+                                        <a class="ui teal image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Mission Number
+                                            <div class="detail" id="mis_na_next"></div>
+
+                                        </a>
+
+                                    </div>
+                                    <div>
+                                        <a class="ui blue image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Rocket Name
+                                            <div class="detail" id="roc_na_next"></div>
+                                        </a>
+
+                                    </div>
+                                    <div>
+                                        <a class="ui yellow image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Launch Site Name
+                                            <div class="detail" id="launc_na_next"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="timer"></div>
+                    <div class="key">Weaks</div>
+                    <div class="key">Days</div>
+                    <div class="key">Hours</div>
+                    <div class="key">Mins</div>
+                    <div class="key">Secs</div>
+
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="large screen only five wide column">
+    <div class="four wide column">
+    </div>
 
-    </div>
-    <div class="tablet only mobile only eight wide column">
-        <div class="ui segment">Tablet and Mobile</div>
-    </div>
-    <div class="tablet only mobile only eight wide column">
-        <div class="ui segment">Tablet and Mobile</div>
-    </div>
-    <div class="mobile only sixteen wide column">
-        <div class="ui segment">Mobile</div>
-    </div>
-    <div class="computer only two column row">
-        <div class="column">
-            <div class="ui segment">Computer and Up</div>
-        </div>
-        <div class="column">
-            <div class="ui segment">Computer and Up</div>
-        </div>
-    </div>
-    <div class="tablet only column">
-        <div class="ui segment">Tablet Only Content</div>
-    </div>
-    <div class="tablet only column">
-        <div class="ui segment">Tablet Only Content</div>
-    </div>
-    <div class="tablet only column">
-        <div class="ui segment">Tablet Only Content</div>
-    </div>
-    <div class="tablet only column">
-        <div class="ui segment">Tablet Only Content</div>
-    </div>
 </div>
 <script type="application/javascript" src="view/js/jquery-3.4.1.js"></script>
 <script type="application/javascript" src="view/js/semantic.js"></script>
+<script type="application/javascript" src="view/js/countdown.js"></script>
+<script type="application/javascript" src="view/js/jquery.countdown.js"></script>
 <script type="application/javascript">
-    $('.ui.animated.button').click(function () {
+    $('.ui.black.animated.button').click(function () {
         console.log('girdi')
         $('.shape')
             .shape('set next side', '.three.side')
             .shape('flip left');
     });
-    $('.ui.secondary.button').click(function () {
+    $('.ui.red.animated.button').click(function () {
         $('.shape')
             .shape('set next side', '.second.side')
             .shape('flip right');
@@ -87,42 +137,76 @@
     });
 
 
+
     $(document).ready(function () {
         console.log('calisti')
+
+        $('.timer').countdown('2020/10/10 10:20', function(event) {
+            $(this).html(event.strftime(
+                '' +
+                '<div class="time"><span>%w</span></div>'
+                +'<div class="time"><span>%d</span></div>'
+                +'<div class="time"><span >%H</span></div>'
+                +'<div class="time"><span >%M</span></div>'
+                +'<div class="time"><span >%S</span></div>' +
+                ''
+            ));
+        });
+        //$('.timer').countdown('2020/01/01');
+
         $.get({
 
-            url: "http://localhost:3000/next", success: function (result) {
-                console.log(result)
-                //$("#div1").html(JSON.stringify(result));
+            url: "https://api.spacexdata.com/v3/launches/next", success: function (result) {
+                console.log(typeof result)
+                let fli_num_next = result.flight_number;
+                let miss_na_next = result.mission_name;
+                let roc_na_next = result.rocket.rocket_name;
+                let la_site_next = result.launch_site.site_name;
+                let la_date_loc_next = result.launch_date_utc;
+                console.log(la_date_loc_next)
+                var deadline = new Date("Jan 5, 2020 15:37:25").getTime();
+                console.log(deadline)
+                $("#fli_num_next").html(JSON.stringify(fli_num_next));
+                $("#mis_na_next").html(JSON.stringify(miss_na_next).replace(/^"(.*)"$/, '$1'))
+                $('#roc_na_next').html(JSON.stringify(roc_na_next).replace(/^"(.*)"$/, '$1'))
+                $('#launc_na_next').html(JSON.stringify(la_site_next).replace(/^"(.*)"$/, '$1'))
             }
         });
+        $.get({
+
+            url: "https://api.spacexdata.com/v3/launches/latest", success: function (result) {
+
+                let fli_num_launched = result.flight_number;
+                let miss_na_launched = result.mission_name;
+                let roc_na_launched = result.rocket.rocket_name;
+                let la_site_launched = result.launch_site.site_name;
+                $("#fli_num_launched").html(JSON.stringify(fli_num_launched));
+                $("#mis_na_launched").html(JSON.stringify(miss_na_launched).replace(/^"(.*)"$/, '$1'))
+                $('#roc_na_launched').html(JSON.stringify(roc_na_launched).replace(/^"(.*)"$/, '$1'))
+                $('#launc_na_launched').html(JSON.stringify(la_site_launched).replace(/^"(.*)"$/, '$1'))
+            }
+        });
+
+
     });
 
 </script>
 <script type="application/javascript">
-    $("#getLaunch").click(function () {
-        console.log("girdi")
-        $.get({
-            url: "http://localhost:3000/spacex.json", success: function (result) {
-                console.log(JSON.stringify(result))
-                $("#div1").html(JSON.stringify(result));
-            }
-        });
-    });
+
     $('.ui.sidebar').sidebar({
         context: $('.bottom.segment')
     }).sidebar('attach events', '.menu .item');
     $(document).ready(function () {
         $('.ui.search')
             .search({
-                minCharacters : 2,
+                minCharacters: 2,
                 apiSettings: {
                     url: 'https://api.spacexdata.com/v3/launches/{query}'
                 },
                 fields: {
-                    results : '',
-                    title   : 'flight_number',
-                    url     : 'static_fire_date_utc'
+                    results: '',
+                    title: 'flight_number',
+                    url: 'static_fire_date_utc'
                 }
             })
         ;

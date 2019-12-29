@@ -1,0 +1,36 @@
+.my-card-label{
+    margin-top: 10% !important;
+    margin-bottom: 3% !important;
+}
+.my-button-pos{
+    margin:auto !important;
+    position: relative !important;
+}
+body{
+    background-image: url('view/img/rocketback.jpg');
+    /*background-image: linear-gradient(to right, #1DA1F2, #0e8c8c);*/
+    /*background-color: #0c85d0;*/
+}
+
+.timer{
+    display: flex;
+    width: 90%;
+
+}
+.timer .time {
+    float: left !important;
+    position: relative;
+    width: 90%;
+    padding: 5px;
+    margin: 0 5px;
+    background: #262626;
+    color: #fff;
+    border: 2px solid #000;
+}
+.key {
+    float: left !important;
+    position: relative;
+    width: 13%;
+    padding: 5px;
+    margin: 0 5px;
+}

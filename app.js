@@ -1,11 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const request = require('request')
 const app = express()
 
 const watch = require('node-watch')
 
 const path = require('path');
 const port = 3000
+
 
 app.use(function (req, res, next) {
 
@@ -33,9 +35,34 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'))
 })
+var response = {
+    flight_num: "",
+    mission_na: "",
+    rocket_na: "",
+    launch_site: ""
+}
 
-app.get('/next', (req,res)=>{
-    res.send('AL');
+app.get('/next', (req,resp)=>{
+
+    request('https://api.spacexdata.com/v3/launches/next' ,(err,req,res) => {
+
+        let obj = JSON.parse(req.body)
+
+        let flight_number = obj.flight_number
+        let mission_name =  obj.mission_name
+        let rocket_name = obj.rocket.rocket_name
+        let launch_site_name=obj.launch_site.site_name
+            //console.log(res) // Print the google web page.
+    response = {
+            flight_num: flight_number,
+            mission_na: mission_name,
+            rocket_na: rocket_name,
+            launch_site: launch_site_name
+
+        }
+        resp.json(response);
+    })
+
 })
 
 app.get('/post', (req,res)=>{
