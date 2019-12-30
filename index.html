@@ -2,176 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SpaceX Data</title>
+    <title>Title</title>
     <link type="text/css" rel="stylesheet" href="view/css/semantic.css">
+    <link rel="stylesheet" href="view/css/app.css">
+
 </head>
-<body>
-
-<div class="ui fixed inverted menu">
-    <div class="ui container">
-<!--        <a href="#" class="header item">-->
-<!--            <img class="logo" src="assets/images/logo.png">-->
-<!--            Project Name-->
-<!--        </a>-->
-        <a style="float: left" class="item">
-            <i class="sidebar icon"></i> Menu
-        </a>
-        <a href="#" class="item">Home</a>
+<body style="background-image: url('view/img/rocketback.jpg'); background-repeat: repeat-x;">
 
 
+<div class="three column stackable ui grid">
+    <div class="three wide column">
 
     </div>
-</div>
-
-<div style="margin-top: 3%;" class="ui bottom attached segment">
-    <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
-
-        <a class="item">
-            <i class="home icon"></i> Home
-        </a>
-        <a class="item">
-            <i class="block layout icon"></i> Topics
-        </a>
-        <a class="item">
-            <i class="smile icon"></i> Friends
-        </a>
-        <a class="item">
-            <i class="calendar icon"></i> History
-        </a>
-        <div class="ui search">
-            <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Search countries...">
-                <i class="search icon"></i>
-            </div>
-            <div class="results"></div>
-        </div>
-    </div>
-    <div class="pusher">
-        <div class="ui basic segment">
-            <h3 class="ui header">Application Content</h3>
-            <button id="getLaunch" class="ui secondary button">
-                Okay
-            </button>
-            <div class="ui two column stackable grid">
-            <div class="three column row">
-                <div class="column">
-                    <div class="ui segment">Content</div>
+    <div class="ten wide column">
+        <div style="margin-top: 13%" class="ui row ">
+            <center>
+                <div class="ui black animated  button" tabindex="0">
+                    <div class="visible content">Next</div>
+                    <div class="hidden content">
+                        <i class="right arrow icon"></i>
+                    </div>
                 </div>
+                <div class="ui red animated button " tabindex="0">
+                    <div class="visible content">POST</div>
+                    <div class="hidden content">
+                        <i class="rocket icon"></i>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div style="margin-top: 3%" class="ui segment">
+            <div class="two column stackable ui grid">
                 <div class="column">
-                    <div class="ui segment">
-                        <div class="ui raised link card">
-                            <div class="content">
-                                <div class="header">Cute Dog</div>
-                                <div class="meta">
-                                    <span class="category">Animals</span>
-                                </div>
-                                <div class="description">
-                                    <p></p>
+                    <div class="ui shape">
+                        <div class="sides">
+                            <div class="second side">
+                                <div class="content">
+                                    <div class="ui row">
+                                        <a class="ui black ribbon label">Flight Number <span
+                                                id="fli_num_launched"></span></a>
+                                        <div>
+                                            <a class="ui teal image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Mission Name
+                                                <div class="detail" id="mis_na_launched"></div>
+                                            </a>
+
+                                        </div>
+                                        <div>
+                                            <a class="ui blue image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Rocket Name
+                                                <div class="detail" id="roc_na_launched"></div>
+                                            </a>
+
+                                        </div>
+                                        <div>
+                                            <a class="ui yellow image label my-card-label">
+                                                <img src="view/img/rocket.png">
+                                                Launch Site Name
+                                                <div class="detail" id="launc_na_launched"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                            <div class="extra content">
-                                <div class="right floated author">
-                                    <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+
+                            <div class="active three side">
+                                <div class="content">
+                                    <a class="ui black ribbon label">Flight Number <span id="fli_num_next"></span></a>
+                                    <div>
+                                        <a class="ui teal image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Mission Number
+                                            <div class="detail" id="mis_na_next"></div>
+
+                                        </a>
+
+                                    </div>
+                                    <div>
+                                        <a class="ui blue image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Rocket Name
+                                            <div class="detail" id="roc_na_next"></div>
+                                        </a>
+
+                                    </div>
+                                    <div>
+                                        <a class="ui yellow image label my-card-label">
+                                            <img src="view/img/rocket.png">
+                                            Launch Site Name
+                                            <div class="detail" id="launc_na_next"></div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui segment">Content</div>
+
+                <div id="willLaunched" class="column my-time">
+                    <center><h1 style="font-family: Poppins, sans-serif; margin-bottom: 3%" class="ui red label">Will be
+                        Launched</h1>
+                    </center>
+                    <div class="timer"></div>
+                    <div class="key">Weaks</div>
+                    <div class="key">Days</div>
+                    <div class="key">Hours</div>
+                    <div class="key">Mins</div>
+                    <div class="key">Secs</div>
+
+
+                </div>
+                <div id="launched" class="column my-launchtime">
+                    <center><a href="" class="ui red label launchtime">Launched</a></center>
+                    <center><h1 style="margin-top: 2%" class="ui teal label launchtime" id="launchtime"></h1></center>
                 </div>
             </div>
-            </div>
-
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
         </div>
     </div>
+    <div class="three wide column">
+    </div>
+
 </div>
-
-
-<div id="div1"></div>
-
 <script type="application/javascript" src="view/js/jquery-3.4.1.js"></script>
 <script type="application/javascript" src="view/js/semantic.js"></script>
-
-<script type="application/javascript">
-    $("#getLaunch").click(function () {
-        console.log("girdi")
-        $.get({
-            url: "http://localhost:3000/spacex.json", success: function (result) {
-                console.log(JSON.stringify(result))
-                $("#div1").html(JSON.stringify(result));
-            }
-        });
-    });
-    $('.ui.sidebar').sidebar({
-        context: $('.bottom.segment')
-    }).sidebar('attach events', '.menu .item');
-    $(document).ready(function () {
-        $('.ui.search')
-            .search({
-                minCharacters : 2,
-                apiSettings: {
-                    url: 'https://api.spacexdata.com/v3/launches/{query}'
-                },
-                fields: {
-                    results : '',
-                    title   : 'flight_number',
-                    url     : 'static_fire_date_utc'
-                }
-            })
-        ;
-
-        // $('.ui.search')
-        //     .search({
-        //
-        //         source: content
-        //     });
-        // $('.ui.search')
-        //     .search({
-        //         minCharacters : 2,
-        //         apiSettings: {
-        //             url: 'https://api.github.com/search/repositories?q={query}'
-        //         },
-        //         fields: {
-        //             results : 'items',
-        //             title   : 'name',
-        //             url     : 'html_url'
-        //         }
-        //     })
-        // ;
-        var content = [
-            {title: 'Andorra'},
-            {title: 'United Arab Emirates'},
-            {title: 'Afghanistan'},
-            {title: 'Antigua'},
-            {title: 'Anguilla'},
-            {title: 'Albania'},
-            {title: 'Armenia'},
-            {title: 'Netherlands Antilles'},
-            {title: 'Angola'},
-            {title: 'Argentina'},
-            {title: 'American Samoa'},
-            {title: 'Austria'},
-            {title: 'Australia'},
-            {title: 'Aruba'},
-            {title: 'Aland Islands'},
-            {title: 'Azerbaijan'},
-            {title: 'Bosnia'},
-            {title: 'Barbados'},
-            {title: 'Bangladesh'},
-            {title: 'Belgium'},
-            {title: 'Burkina Faso'},
-            {title: 'Bulgaria'},
-            {title: 'Bahrain'},
-            {title: 'Burundi'}
-            // etc
-        ];
-    })
+<script type="application/javascript" src="view/js/jquery.countdown.js"></script>
+<script type="application/javascript" src="view/js/main.js">
 
 </script>
+
 </body>
 </html>
