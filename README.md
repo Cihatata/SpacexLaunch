@@ -13,12 +13,12 @@ curl localhost:3000
 ```
 
 ## Used Tech-Stack
-Semantic UI -- Web Design/Responsive Design CSS Library
-JQuery  -- DOM manipulation/AJAX API Request/JSON Data
-JQuery.countdown.js -- use Countdown
-NodeJS -- serve Application(Express.js)/CORS settings(Middleware) 
-Docker -- App Containerization
-DigitalOcean -- Server Hosting(Ubuntu)
+Semantic UI -- Web Design/Responsive Design CSS Library <br />
+JQuery  -- DOM manipulation/AJAX API Request/JSON Data   <br />
+JQuery.countdown.js -- use Countdown <br />
+NodeJS -- serve Application(Express.js)/CORS settings(Middleware) <br />
+Docker -- App Containerization <br />
+DigitalOcean -- Server Hosting(Ubuntu) <br />
 
 I dont modern Front-End Framework(React,Angular,Vue...) So I used JQuery,AJAX  
 
