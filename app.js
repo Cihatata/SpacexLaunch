@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 const path = require('path');
-const port = 8080
+const port = 3000
 
 
 app.use(function (req, res, next) {
