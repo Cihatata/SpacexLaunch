@@ -20,7 +20,7 @@ NodeJS -- serve Application(Express.js)/CORS settings(Middleware) <br />
 Docker -- App Containerization <br />
 DigitalOcean -- Server Hosting(Ubuntu) <br />
 
-I dont modern Front-End Framework(React,Angular,Vue...) So I used JQuery,AJAX  
+I dont know modern Front-End Framework(React,Angular,Vue...) So I used JQuery,AJAX 
 
 ## Challenges You Face
 I had a hard time Responsive Designing
