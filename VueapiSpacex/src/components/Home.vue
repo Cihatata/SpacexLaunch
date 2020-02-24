@@ -1,11 +1,10 @@
 <template>
   <div class="main">
-    <Header/>
+    
   </div>
 </template>
 
 <script>
-  import Header from './Header';
 
   export default {
     name: 'HelloWorld',
@@ -13,9 +12,6 @@
       return {
         msg: 'Welcome to Your Vue.js App',
       };
-    },
-    components: {
-      Header,
     },
   };
 </script>

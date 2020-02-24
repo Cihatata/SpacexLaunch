@@ -10,7 +10,7 @@
               <router-link  to="/" tag="button">ASDASD</router-link>
             </li>
             <li>
-              <router-link  to="/" tag="button" >asdasdas</router-link>
+              <router-link  to="/launch" tag="button">asdasdas</router-link>
             </li>
             <li>
               <router-link  to="/" tag="button">asdasd</router-link>
@@ -27,9 +27,7 @@
 <script>
   export default {
     name: 'Header',
-    data : {
-      home: '/',
-    }
+
   };
 </script>
 
@@ -44,7 +42,8 @@
     display: flex;
     align-items: center;
     padding: 1.25em;
-    pointer-events: none;
+    z-index: 1;
+
     box-sizing: border-box;
     height: 78px;
     &-logo{
