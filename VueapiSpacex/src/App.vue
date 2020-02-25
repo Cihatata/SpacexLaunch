@@ -23,8 +23,7 @@
   .map{
       top:85px;
       position: relative;
-      max-width: 90%;
-      background-color: #eee;
+      max-width: 85%;
       margin-left: auto;
       margin-right:auto;
     }
