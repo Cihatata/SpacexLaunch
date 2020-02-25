@@ -7,16 +7,16 @@
         <nav class="Header-menu">
           <ul class="Header-menu-buttons">
             <li>
-              <router-link  to="/" tag="button">ASDASD</router-link>
+              <router-link  to="/" tag="button">Home</router-link>
             </li>
             <li>
-              <router-link  to="/launch" tag="button">asdasdas</router-link>
+              <router-link  to="/launch" tag="button">Launch</router-link>
             </li>
             <li>
-              <router-link  to="/" tag="button">asdasd</router-link>
+              <router-link  to="/" tag="button">Test</router-link>
             </li>
             <li>
-              <router-link  to="/" tag="button">asdasd</router-link>
+              <router-link  to="/" tag="button">Info</router-link>
             </li>
           </ul>
         </nav>
