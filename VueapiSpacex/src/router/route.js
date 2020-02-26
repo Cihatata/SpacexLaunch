@@ -1,6 +1,8 @@
 import Home from '../components/Home';
 import Launch from "../components/Launch";
 import RocketDetail from "../components/RocketDetail";
+import Info from "../components/Info";
+
 export default ({
   routes: [
     {
@@ -14,10 +16,15 @@ export default ({
       component: Launch,
     },
     {
-      path: '/:rocket_id',
+      path: '/rockets/:rocket_id',
       name: 'RocketDetail',
       component: RocketDetail,
-    }
+    },
+    {
+      path: '/info',
+      name: 'Info',
+      component: Info,
+    },
 
   ],
   mode: 'history',

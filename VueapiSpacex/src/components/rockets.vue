@@ -31,7 +31,7 @@
     },
     computed:{
       rocketDetailPath(){
-        return `/${this.rockets.rocket_id}`
+        return `/rockets/${this.rockets.rocket_id}`
       }
     }
 

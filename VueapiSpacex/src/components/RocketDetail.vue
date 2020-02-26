@@ -1,5 +1,5 @@
 <template>
-  <h1>{{$route.path}}</h1>
+  <h1>{{$route.params.rocket_id}}</h1>
 </template>
 
 <script>

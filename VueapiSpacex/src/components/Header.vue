@@ -1,5 +1,4 @@
 <template>
-
   <header class="Header">
         <div class="Header-logo ">
           <img src="../assets/spacexlogo.png" alt="spacexApiLogo" height="60px" >
@@ -16,12 +15,11 @@
               <router-link  to="/" tag="button">Test</router-link>
             </li>
             <li>
-              <router-link  to="/" tag="button">Info</router-link>
+              <router-link  to="/info" tag="button">Info</router-link>
             </li>
           </ul>
         </nav>
   </header>
-
 </template>
 
 <script>
